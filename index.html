@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>OptimusTech</title>
+  
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  
+  
+  <style>
+  
+  /* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+  
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+  
+     :root{
+   --branco: #fff;
+   --cinza-claro: #3a404e;
+   --cinza: #667085;
+   --borda-cinza: rgba(102,112,133,0.2);
+   --cinza-escuro: #101828;
+   --vermelho: #8e2424;
+   --vermelho-transparente: rgba(142,36,36,0.05);
+   
+}
+
+body{
+   background: var(--branco);
+   font-family: "Inter", sans-serif;
+   user-select: none;
+}
+
+.navigation{
+   background: "";
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   padding: 20px 80px;
+}
+
+.navigation__logo{
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   color: var(--cinza-claro);
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.navigation__navbar{
+   background: "";
+   display: flex;
+   flex-direction: row;
+   gap: 180px;
+}
+
+.navigation__navbar__links{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   align-items: center;
+}
+
+.navigation__navbar__links a{
+   text-decoration: none;
+   color: var(--cinza);
+   font-size: 12px;
+   font-weight: 500;
+   cursor: none;
+}
+
+.navigation__navbar__links a:hover{
+   color: var(--vermelho);
+}
+
+.navigation__navbar__login{
+   background: "";
+   display: flex;
+   gap: 20px
+}
+
+.navigation__navbar__login button:not(:last-child){
+   background: transparent;
+   border: 0;
+   border-radius: 10px;
+   font-size: 12px;
+   padding: 10px 18px;
+}
+
+.cadastrar{
+   border: 0;
+   border-radius: 10px;
+   font-size: 12px;
+   padding: 10px 18px;
+   background: var(--vermelho);
+   color: var(--branco);
+}
+
+.cabecalho{
+   margin: 60px 80px;
+   text-align: center;
+}
+
+#Sobre{
+   color: var(--vermelho);
+   font-size: 12px;
+   font-weight: 700;
+   padding: 30px 0px 20px 0px;
+}
+
+.cabecalho__titulo{
+   font-size: 36px;
+   font-weight: 700;
+   padding: 0 0 30px 0;
+}
+
+.cabecalho__informacoes{
+   padding: 0 110px;
+   font-weight: 400;
+   line-height: 1.5em;
+   color: var(--cinza);
+}
+
+/*primeira sessão*/
+
+.metricas{
+   margin: 0 80px;
+   display: grid;
+   grid-template-columns: 25% 25% 25% 25%;
+}
+
+.metricas__info{
+   padding: 10px 5px;
+}
+
+.metricas__info h2{
+   color: var(--vermelho);
+   font-size: 50px;
+   font-weight: 800;
+   line-height: 1.2em;
+}
+
+.metricas__info h3{
+   margin: 10px 0;
+   font-size: 12px;
+   font-weight: 700;
+   line-height: 1.2em;
+}
+
+.metricas__info p{
+   font-size: 12px;
+   font-weight: 400;
+   color: var(--cinza);
+   line-height: 1.5em;
+}
+
+/*segunda sessão*/
+
+.vagas{
+   margin: 160px 80px 60px 80px;
+   display: grid;
+   grid-template-columns: 1 1fr;
+   justify-items: center;
+   text-align: center;
+}
+
+.vagas__box{
+   padding: 5px 10px;
+   background: var(--vermelho-transparente);
+   color: var(--vermelho);
+   width: max-content;
+   font-size: 12px;
+   font-weight: 500;
+   border-radius: 50px;
+   text-wrap: nowrap;
+}
+
+.vagas__titulo{
+   font-size: 30px;
+   font-weight: 700;
+   padding: 30px 0;
+}
+
+.info{
+   font-size: 20px;
+   color: var(--cinza);
+   padding: 0px 0px 30px 0;
+}
+
+.vagas__img img{
+   width: 100%;
+}
+
+.vagas__areas{
+   margin: 10px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   text-align: initial;
+   width: 80%;
+}
+
+.vagas__areas h2{
+   margin: 50px 0 20px 0;
+   font-size: 18px;
+   font-weight: 600;
+}
+
+.vagas__areas__descricao{
+   border: 1px solid var(--borda-cinza);
+   border-radius: 20px;
+}
+
+.vagas__areas__descricao h3{
+   font-size: 16px;
+   font-weight: 500;
+   padding: 15px 20px;
+}
+
+.vagas__areas__descricao__banner{
+   display: flex;
+   gap: 20px;
+   padding: 15px 20px;
+   color: var(--cinza);
+}
+
+/*Caixa de comentarios*/
+
+.comentarios{
+   margin: 0 80px;
+}
+
+.comentarios__box{
+   width: 100%;
+   border-radius: 20px;
+   background: var(--vermelho-transparente);
+   padding: 0px;
+   text-align: center;
+   
+}
+
+.comentarios__box p:nth-child(1){
+   font-size: 12px;
+   font-weight: 400;
+   color: var(--vermelho);
+   padding: 40px 0 10px 0;
+}
+
+.comentarios__box h3{
+   font-size: 25px;
+   font-weight: 500;
+   line-height: 1.1em;
+   padding: 0 20px;
+}
+
+.comentarios__box img{
+   width: 5%;
+   padding: 20px 0 5px 0;
+}
+
+.nome{
+   display: flex;
+   flex-direction: column;
+   font-size: 10px;
+   font-weight: 700;
+   line-height: 1.5em;
+   color: var(--cinza-escuro);
+}
+
+.profissao{
+   font-size: 10px;
+   font-weight: 400;
+   color: var(--cinza);
+   padding: 0 0 30px 0;
+}
+
+.rodape{
+   margin: 60px 0 0 0;
+   padding: 40px 0;
+   background: var(--borda-cinza);
+   text-align: center;
+}
+
+.rodape h2{
+   font-size: 30px;
+   font-weight: 700;
+}
+
+.rodape p{
+   padding: 10px 0;
+   font-size: 0.6em;
+   font-weight: 300;
+   color: var(--cinza);
+}
+
+.rodape input{
+   border: 1px solid var(--cinza);
+   border-radius: 50px;
+   padding: 10px 18px;
+   margin: 20px 0;
+   width: 30%;
+}
+
+  </style>
+</head>
+
+<body>
+  
+ <nav class="navigation">
+    
+    <p class="navigation__logo"><img src="worldwide 1 (Traced).svg" alt="Logo OptimusTech"> OptimusTech</p>
+    
+    <div class="navigation__navbar">
+      <div class="navigation__navbar__links">
+         <a href="#">Home</a>
+         <a href="#">Produtos</a>
+         <a href="#">Recursos</a>
+         <a href="#Sobre">Sobre nós</a>
+      </div>
+      
+      <div class="navigation__navbar__login">
+         <button>Entrar</button>
+         <button class="cadastrar">Cadastrar</button>
+      </div>
+    </div>
+ </nav>
+ 
+ <header class="cabecalho">
+    <p id="Sobre">Sobre nós</p>
+    <h1 class="cabecalho__titulo">Por que somos diferentes?</h1>
+    
+    <div class="cabecalho__informacoes">
+       <p> Nós focamos nos detalhes de tudo que fazemos. Tudo para ajudar as empresas de todo o mundo a se concentrarem naquilo que é realmente importante para elas. </p>
+    </div>
+ </header>
+ 
+ <section class="metricas">
+    <div class="metricas__info">
+       <h2>400+</h2>
+       <h3>Projetos concluidos</h3>
+       <p>Nós ajudamos a construir mais de 400 projetos incríveis.</p>
+    </div>
+    
+    <div class="metricas__info">
+       <h2>100+</h2>
+       <h3>Colaboradores</h3>
+       <p>Temos mais de 100 colaboradores no nosso time que se preocupam com nossos clientes.</p>
+    </div>
+    
+    <div class="metricas__info">
+       <h2>20k</h2>
+       <h3>Downloads</h3>
+       <p>Nossos projetos que estão disponíveis em lojas já foram baixados mais de 20.000 vezes.</p>
+    </div>
+    
+    <div class="metricas__info">
+       <h2>500+</h2>
+       <h3>Reviews 5 estrelas</h3>
+       <p>Estamos orgulhosos de contar com mais de 500 reviews 5 estrelas em nossos produtos.</p>
+    </div>
+ </section>
+ 
+ <section class="vagas">
+    <p class="vagas__box">Vagas abertas!</p>
+    
+    <h2 class="vagas__titulo">Estamos procurando por talentos</h2>
+    <p class="info">Somos uma equipe 100% remota com pessoas do Brasil inteiro.</p>
+    
+   <div class="vagas__img">
+    <img src="Image.svg" alt="Grupo de pessoas em uma reunião de equipe">
+   </div>
+   
+   <main class="vagas__areas">
+      
+      <h2>Design</h2>
+      
+      <div class="vagas__areas__descricao">
+         <h3>Product Designer</h3>
+         <div class="vagas__areas__descricao__banner">
+            <p>Full-time</p>
+            <p>Faixa salarial: R$7.000</p>
+         </div>
+         
+      </div>
+      
+      <div class="vagas__areas__descricao">
+         <h3>UX Designer</h3>
+         <div class="vagas__areas__descricao__banner">
+          <p>Full-time</p>
+          <p>Faixa salarial: R$6.000</p>
+         </div>
+      </div>
+      
+      <h2>Desenvolvimento de Software</h2>
+      
+      <div class="vagas__areas__descricao">
+         <h3>Desenvolvedor(a) iOS</h3>
+         <div class="vagas__areas__descricao__banner">
+            <p>Full-time</p>
+            <p>Faixa salarial: R$8.000</p>
+         </div>
+      </div>
+       
+            <div class="vagas__areas__descricao">
+                  <h3>Desenvolvedor(a) Front-end</h3>
+                  <div class="vagas__areas__descricao__banner">
+                     <p>Full-time</p>
+                     <p>Faixa salarial: R$7.000</p>
+                  </div>
+               </div>
+                  
+               <div class="vagas__areas__descricao">
+                  <h3>Desenvolvedor(a) Back-end</h3>
+                  <div class="vagas__areas__descricao__banner">
+                  <p>Full-time</p>
+                  <p>Faixa salarial: R$8.000</p>
+                   </div>
+               </div>
+   </main>
+ </section>
+ 
+ <section class="comentarios">
+    <div class="comentarios__box">
+       <p>Veja o que nossos colaboradores falam sobre nós</p>
+       
+       <h3>OptimusTech se importa com a saúde dos seus colaboradores e sempre procura nos dar todo tipo de auxílio possível.</h3>
+       
+       <img src="FotoPerfil.png" alt="foto de perfil de Yuri Souza Camacan">
+       
+       <p class="nome">Yuri Camacan</p>
+       <p class="profissao">Desenvolvedor Web</p>
+    </div>
+ </section>
+ 
+ <footer class="rodape">
+    <h2>Acompanhe as nossas oportunidades </h2>
+    <p>Seja o primeiro a saber quando novas vagas serão abertas!</p>
+    <input type="email" name="e-mail" id="email-area" placeholder="Seu e-mail"> <button class="cadastrar">Cadastrar</button>
+    
+    <p>& 2022 OptimusTech. Todos os direitos reservados</p>
+ </footer>
+  
+  <script src="main.js"></script>
+</body>
+
+</html>
